@@ -22,9 +22,9 @@ public class ReverseLinkedList {
             if (isFirst) {
                 head.next = null;
                 isFirst = false;
-                newHead = creatNewNode(current.next.val, head);
+                newHead = createNewNode(current.next.val, head);
             } else {
-                newHead = creatNewNode(current.next.val, newHead);
+                newHead = createNewNode(current.next.val, newHead);
             }
             current = current.next;
 
@@ -34,7 +34,7 @@ public class ReverseLinkedList {
 
     }
 
-    static ListNode creatNewNode(int value, ListNode next) {
+    static ListNode createNewNode(int value, ListNode next) {
         ListNode result = new ListNode();
         result.val = value;
         result.next = next;
