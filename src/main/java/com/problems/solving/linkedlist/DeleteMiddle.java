@@ -25,4 +25,24 @@ public class DeleteMiddle {
     }
 
 
+    public ListNode middleNodeV2(ListNode head) {
+        if (head.next == null) {
+            return null;
+        }
+        int length = 1;
+        ListNode iterator = head;
+        ListNode middleNode = head;
+        while (iterator.next != null) {
+            length++;
+            iterator = iterator.next;
+        }
+        int middle = length / 2;
+        for (int i = 0; i < middle-1; i++) {
+            middleNode = middleNode.next;
+        }
+        middleNode.next = middleNode.next.next;
+        return head;
+    }
+
+
 }
